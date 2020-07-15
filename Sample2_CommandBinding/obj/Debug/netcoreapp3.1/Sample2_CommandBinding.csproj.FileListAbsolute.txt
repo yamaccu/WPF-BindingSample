@@ -1,0 +1,17 @@
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.csprojAssemblyReference.cache
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\App.g.cs
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding_MarkupCompile.cache
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding_MarkupCompile.lref
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.exe
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.deps.json
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.runtimeconfig.json
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.runtimeconfig.dev.json
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.dll
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\bin\Debug\netcoreapp3.1\Sample2_CommandBinding.pdb
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.g.resources
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.AssemblyInfoInputs.cache
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.AssemblyInfo.cs
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.dll
+C:\yusuke\GUI\DataBindingSample\Sample2_CommandBinding\obj\Debug\netcoreapp3.1\Sample2_CommandBinding.pdb
