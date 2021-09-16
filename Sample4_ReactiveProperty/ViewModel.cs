@@ -30,12 +30,14 @@ namespace Sample4_ReactiveProperty
         private void OneUp()
         {
             //変数を使う場合は.Valueをつける（Xaml側でバインディングするときも.Valueが必要）
-            Counter.Value = (Convert.ToString(Convert.ToInt32(Counter.Value) + 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter.Value) + 1));
+            Counter.Value = numValue;
         }
 
         private void OneDown()
         {
-            Counter.Value = (Convert.ToString(Convert.ToInt32(Counter.Value) - 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter.Value) - 1));
+            Counter.Value = numValue;
         }
     }
 }

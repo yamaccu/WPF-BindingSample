@@ -21,14 +21,14 @@ namespace Sample3_DelegateCommand
         }
 
         //カウントアップ、カウントダウンボタンのコマンドのバインディング先
-        public ICommand OneUpCommand { get; set; }
-        public ICommand OneDownCommand { get; set; }
+        public Command OneUpCommand { get; set; }
+        public Command OneDownCommand { get; set; }
 
         //コンストラクターでコマンドに処理を追加
         public ViewModel()
         {
-            OneUpCommand = new DelegateCommand(OneUp);
-            OneDownCommand = new DelegateCommand(OneDown);
+            OneUpCommand = new Command(OneUp);
+            OneDownCommand = new Command(OneDown);
         }
 
 
@@ -37,7 +37,8 @@ namespace Sample3_DelegateCommand
         /// </summary>
         public void OneUp()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) + 1));
+            var numValue = Convert.ToString(Convert.ToInt32(Counter) + 1);
+            Counter = numValue;
         }
 
         /// <summary>
@@ -45,7 +46,8 @@ namespace Sample3_DelegateCommand
         /// </summary>
         public void OneDown()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) - 1));
+            var numValue = Convert.ToString(Convert.ToInt32(Counter) - 1);
+            Counter = numValue;
         }
 
     }
@@ -79,87 +81,36 @@ namespace Sample3_DelegateCommand
     /// <summary>
     /// デリゲートでICommandを実装
     /// </summary>
-    public class DelegateCommand : ICommand
+    public class Command : ICommand
     {
-        //returenがない場合はActionを使う
         private Action execute;
+        private bool canExecute = true;
 
-        //returnがある場合はFuncを使う
-        private Func<bool> canExecute;
-
-        /// <summary>
-        /// 渡されたExecuteメソッドを実行するインスタンスを作成
-        /// </summary>
-        /// <param name="execute">Executeメソッドで実行する処理</param>
-        public DelegateCommand(Action execute) : this(execute, () => true)
+        public Command(Action execute)
         {
-        }
-
-        /// <summary>
-        /// 渡されたExecuteメソッド・CanExecuteメソッドを実行するインスタンスを作成
-        /// </summary>
-        /// <param name="execute">Executeメソッドで実行する処理</param>
-        /// <param name="canExecute">CanExecuteメソッドで実行する処理</param>
-        public DelegateCommand(Action execute, Func<bool> canExecute)
-        {
-            if (execute == null)
-            {
-                throw new ArgumentNullException("execute");
-            }
-
-            if (canExecute == null)
-            {
-                throw new ArgumentNullException("canExecute");
-            }
-
             this.execute = execute;
-            this.canExecute = canExecute;
         }
 
-        /// <summary>
-        /// コマンドを実行
-        /// </summary>
-        public void Execute()
+        public void Execute(object parameter)
         {
             execute();
         }
 
-        /// <summary>
-        /// コマンドが実行可能かどうか
-        /// </summary>
-        /// <returns>実行可能な場合はtrue</returns>
-        public bool CanExecute()
+        public bool CanExecute(object parameter)
         {
-            return canExecute();
+            return canExecute;
         }
 
-        /// <summary>
-        /// ICommand.CanExecuteの明示的な宣言
-        /// </summary>
-        /// <param name="parameter"></param>
-        /// <returns></returns>
-        bool ICommand.CanExecute(object parameter)
+        public void SetCanExecute(bool canExecute)
         {
-            return CanExecute();
+            this.canExecute = canExecute;
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged(this, EventArgs.Empty);
+            }
         }
 
-        /// <summary>
-        /// CanExecuteの結果に変更があったことを通知するイベント
-        /// </summary>
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
-        /// <summary>
-        /// ICommand.Executeの明示的な宣言
-        /// </summary>
-        /// <param name="parameter"></param>
-        void ICommand.Execute(object parameter)
-        {
-            Execute();
-        }
+        public event EventHandler CanExecuteChanged;
     }
 }
 

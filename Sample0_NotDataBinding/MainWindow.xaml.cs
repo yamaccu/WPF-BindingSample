@@ -28,12 +28,14 @@ namespace Sample0_NotDataBinding
         //クリックイベントでカウントアップ、カウントダウンを実装
         private void OneUp_Click(object sender, RoutedEventArgs e)
         {
-            Counter.Text = Convert.ToString(Convert.ToInt32(Counter.Text) + 1);
+            var numValue = Convert.ToString(Convert.ToInt32(Counter.Text) + 1);
+            Counter.Text = numValue;
         }
 
         private void OneDown_Click(object sender, RoutedEventArgs e)
         {
-            Counter.Text = Convert.ToString(Convert.ToInt32(Counter.Text) - 1);
+            var numValue = Convert.ToString(Convert.ToInt32(Counter.Text) - 1);
+            Counter.Text = numValue;
         }
     }
 }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Sample1_DataBinding/1.0.0": {
+        "runtime": {
+          "Sample1_DataBinding.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sample1_DataBinding/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -25,7 +25,8 @@ namespace Sample1_DataBinding
         /// </summary>
         public void OneUp()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) + 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter) + 1));
+            Counter = numValue;
         }
 
         /// <summary>
@@ -33,7 +34,8 @@ namespace Sample1_DataBinding
         /// </summary>
         public void OneDown()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) - 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter) - 1));
+            Counter = numValue;
         }
     }
 

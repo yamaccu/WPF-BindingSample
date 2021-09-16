@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "bs4llOoWVsfUFvuKBwr9qWWjh/nW647rbxzKXDS2w26XNmIcboFmxnH3nbAMWqBUC6i9Bv9cIGS0oWItGDiy7A==",
+  "success": true,
+  "projectFilePath": "C:\\yusuke\\program\\WPF\\WPF-BindingSample\\Sample4_ReactiveProperty\\Sample4_ReactiveProperty.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\reactiveproperty\\7.1.0\\reactiveproperty.7.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\reactiveproperty.core\\7.1.0\\reactiveproperty.core.7.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.reactive\\4.4.1\\system.reactive.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

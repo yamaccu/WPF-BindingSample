@@ -20,6 +20,9 @@ namespace Sample2_CommandBinding
             }
         }
 
+
+        System.Windows.Controls.Primitives.ButtonBase a;
+
         //カウントアップ、カウントダウンボタンのコマンドのバインディング先
         public ICommand OneUpCommand { get; set; }
         public ICommand OneDownCommand { get; set; }
@@ -37,7 +40,8 @@ namespace Sample2_CommandBinding
         /// </summary>
         public void OneUp()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) + 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter) + 1));
+            Counter = numValue;
         }
 
         /// <summary>
@@ -45,7 +49,8 @@ namespace Sample2_CommandBinding
         /// </summary>
         public void OneDown()
         {
-            Counter = (Convert.ToString(Convert.ToInt32(Counter) - 1));
+            var numValue = (Convert.ToString(Convert.ToInt32(Counter) - 1));
+            Counter = numValue;
         }
 
     }
