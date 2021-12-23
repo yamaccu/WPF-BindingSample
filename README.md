@@ -38,4 +38,11 @@ Sample2より若干コード量を減らせる。
 ## sample4
 
 ReactivePropertyを使用してデータとコマンドをバインディングしたもの。  
-コード量をかなり削減できてお勧め。
+コード量をかなり削減できてお勧め。  
+
+<br>
+<br>
+<br>
+
+以下のページで詳しく解説しています。
+[WPFでBindingを使用する](https://yamaccu.github.io/tils/20210916-Csharp-WPFBinding)
